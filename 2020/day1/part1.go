@@ -1,34 +1,22 @@
 package main
 
 import (
-	"bufio"
+	"advent-of-code/utils"
 	"fmt"
 	"log"
-	"os"
-	"strconv"
 )
 
 func main() {
-	file, err := os.Open("./input.txt")
+	nums, err := utils.InputToSlice("./input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer file.Close()
 
-	var nums []int
+	part1(nums)
+	part2(nums)
+}
 
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		value, err := strconv.Atoi(scanner.Text())
-		if err != nil {
-			log.Fatal(err)
-		}
-		nums = append(nums, value)
-	}
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
-
+func part1(nums []int) {
 done:
 	for _, i := range nums {
 		for _, j := range nums {
@@ -38,6 +26,4 @@ done:
 			}
 		}
 	}
-
-	part2()
 }

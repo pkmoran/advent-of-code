@@ -1,34 +1,10 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"log"
-	"os"
-	"strconv"
 )
 
-func part2() {
-	file, err := os.Open("./input.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-
-	var nums []int
-
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		value, err := strconv.Atoi(scanner.Text())
-		if err != nil {
-			log.Fatal(err)
-		}
-		nums = append(nums, value)
-	}
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
-
+func part2(nums []int) {
 done:
 	for _, i := range nums {
 		for _, j := range nums {
