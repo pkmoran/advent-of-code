@@ -8,14 +8,6 @@ import (
 
 // InputToSlice reads a file and returns a slice of strings
 func InputToSlice(filePath string, delim string) ([]string, error) {
-
-	// file, err := os.Open(filePath)
-	// if err != nil {
-	// 	return nil, err
-	// }
-	// defer file.Close()
-
-	// reader := bufio.NewReader(file)
 	content, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		return nil, err
