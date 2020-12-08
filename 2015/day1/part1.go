@@ -3,14 +3,10 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 )
 
 func main() {
-	chars, err := utils.InputToSlice("./input.txt", "")
-	if err != nil {
-		log.Fatal(err)
-	}
+	chars := utils.InputToSlice("./input.txt", "")
 
 	const UP = "("
 	const DOWN = ")"

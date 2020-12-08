@@ -7,10 +7,7 @@ import (
 )
 
 func main() {
-	lines, err := utils.InputToSlice("./input.txt", "\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	lines := utils.InputToSlice("./input.txt", "\n")
 
 	nums, err := utils.StringsToInts(lines)
 	if err != nil {

@@ -3,7 +3,6 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 	"strconv"
 	"strings"
 )
@@ -15,10 +14,7 @@ type box struct {
 }
 
 func main() {
-	lines, err := utils.InputToSlice("./input.txt", "\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	lines := utils.InputToSlice("./input.txt", "\n")
 
 	part1(lines)
 	part2(lines)

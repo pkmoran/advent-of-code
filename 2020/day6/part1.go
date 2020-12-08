@@ -3,15 +3,11 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 	"strings"
 )
 
 func main() {
-	groups, err := utils.InputToSlice("./input.txt", "\n\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	groups := utils.InputToSlice("./input.txt", "\n\n")
 
 	total := 0
 	total2 := 0

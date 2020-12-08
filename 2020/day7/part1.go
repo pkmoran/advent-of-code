@@ -17,10 +17,7 @@ type ruleSet struct {
 const testColor = "shiny gold"
 
 func main() {
-	rules, err := utils.InputToSlice("./input.txt", ".\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	rules := utils.InputToSlice("./input.txt", ".\n")
 
 	ruleData := make(map[string][]ruleSet)
 	for _, r := range rules {

@@ -2,19 +2,20 @@ package utils
 
 import (
 	"io/ioutil"
+	"log"
 	"strconv"
 	"strings"
 )
 
 // InputToSlice reads a file and returns a slice of strings
-func InputToSlice(filePath string, delim string) ([]string, error) {
+func InputToSlice(filePath string, delim string) []string {
 	content, err := ioutil.ReadFile(filePath)
 	if err != nil {
-		return nil, err
+		log.Fatal(err)
 	}
 	list := strings.Split(string(content), delim)
 
-	return list, nil
+	return list
 }
 
 // StringsToInts converts a slice of strings to a slice of ints

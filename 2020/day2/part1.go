@@ -13,10 +13,7 @@ type passwordRule struct {
 }
 
 func main() {
-	lines, err := utils.InputToSlice("./input.txt", "\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	lines := utils.InputToSlice("./input.txt", "\n")
 
 	passwords := convertToPasswordRules(lines)
 

@@ -3,7 +3,6 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 )
 
 type planeSeat struct {
@@ -11,10 +10,7 @@ type planeSeat struct {
 }
 
 func main() {
-	passes, err := utils.InputToSlice("./input.txt", "\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	passes := utils.InputToSlice("./input.txt", "\n")
 
 	var passIDs []int
 

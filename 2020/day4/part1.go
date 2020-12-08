@@ -3,7 +3,6 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 	"strings"
 )
 
@@ -19,10 +18,7 @@ const passportID = "pid"
 const countryID = "cid"
 
 func main() {
-	lines, err := utils.InputToSlice("./input.txt", "\n\n")
-	if err != nil {
-		log.Fatal(err)
-	}
+	lines := utils.InputToSlice("./input.txt", "\n\n")
 
 	var passports []map[string]string
 
