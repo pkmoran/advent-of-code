@@ -3,7 +3,6 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 	"strings"
 )
 
@@ -51,9 +50,7 @@ func convertToPasswordRules(lines []string) (passwords []passwordRule) {
 
 func getMinMax(s string) (min, max int) {
 	m := strings.Split(s, "-")
-	mInt, err := utils.StringsToInts(m)
-	if err != nil {
-		log.Fatal(err)
-	}
+	mInt := utils.StringsToInts(m)
+
 	return mInt[0], mInt[1]
 }

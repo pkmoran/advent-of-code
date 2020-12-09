@@ -3,16 +3,13 @@ package main
 import (
 	"advent-of-code/utils"
 	"fmt"
-	"log"
 )
 
 func main() {
 	lines := utils.InputToSlice("./input.txt", "\n")
 
-	nums, err := utils.StringsToInts(lines)
-	if err != nil {
-		log.Fatal(err)
-	}
+	nums := utils.StringsToInts(lines)
+
 	part1(nums)
 	part2(nums)
 }

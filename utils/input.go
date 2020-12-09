@@ -19,16 +19,16 @@ func InputToSlice(filePath string, delim string) []string {
 }
 
 // StringsToInts converts a slice of strings to a slice of ints
-func StringsToInts(input []string) ([]int, error) {
+func StringsToInts(input []string) []int {
 
 	var output []int
 	for _, i := range input {
 		value, err := strconv.Atoi(i)
 		if err != nil {
-			return nil, err
+			log.Fatal(err)
 		}
 		output = append(output, value)
 	}
 
-	return output, nil
+	return output
 }
