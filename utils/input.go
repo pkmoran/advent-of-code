@@ -32,3 +32,16 @@ func StringsToInts(input []string) []int {
 
 	return output
 }
+
+func StringsToFloat64(input []string) []float64 {
+	var output []float64
+	for _, i := range input {
+		value, err := strconv.ParseFloat(i, 64)
+		if err != nil {
+			log.Fatal(err)
+		}
+		output = append(output, value)
+	}
+
+	return output
+}
